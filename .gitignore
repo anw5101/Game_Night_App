@@ -1,0 +1,25 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/Runner/GeneratedPluginRegistrant.*
+android/.gradle/
+android/app/build/
+.idea/
+*.iml
+vscode/
+*.log
+
+# Python environment files
+backend/.venv/
+backend/__pycache__/
+web/public/data/events.json
+venv/
+__pycache__/

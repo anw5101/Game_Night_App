@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.948468623642-ks3qmsrut3dbtkoju6crjqg842frdh8j</string>
+			</array>
+		</dict>
+	</array>
+	<key>GIDClientID</key>
+	<string>948468623642-ks3qmsrut3dbtkoju6crjqg842frdh8j.apps.googleusercontent.com</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Game Night needs your location to show nearby game nights and events.</string>
+</dict>
+</plist>
