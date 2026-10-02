@@ -12,28 +12,44 @@ let radiusCircle = null;
 let allEvents = [];
 let eventMarkers = [];
 
+let userMarker = null;
+
+function setUserLocation(latlng, title) {
+    currentPos = latlng;
+    
+    if (!userMarker) {
+        const userIcon = L.divIcon({
+            className: 'user-marker',
+            html: '<div style="background-color: blue; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white;"></div>',
+            iconSize: [16, 16]
+        });
+        userMarker = L.marker(latlng, {icon: userIcon}).addTo(map);
+    }
+    
+    userMarker.setLatLng(latlng);
+    if (title) {
+        userMarker.bindPopup(title).openPopup();
+    }
+    
+    updateRadiusCircle();
+    renderMarkers();
+}
+
 // Request user location
 map.locate({setView: true, maxZoom: 12});
 
 map.on('locationfound', function(e) {
-    currentPos = e.latlng;
-    
-    // Custom user marker
-    const userIcon = L.divIcon({
-        className: 'user-marker',
-        html: '<div style="background-color: blue; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white;"></div>',
-        iconSize: [16, 16]
-    });
-    
-    L.marker(e.latlng, {icon: userIcon}).addTo(map).bindPopup("You are here").openPopup();
-    
-    updateRadiusCircle();
-    renderMarkers();
+    setUserLocation(e.latlng, "You are here");
 });
 
 map.on('locationerror', function(e) {
     console.warn("Location access denied or unavailable. Using default map center.");
-    renderMarkers();
+    setUserLocation(map.getCenter(), "Default Location (Location Access Denied).<br>Click anywhere on the map to change.");
+});
+
+// Allow user to click the map to change their location
+map.on('click', function(e) {
+    setUserLocation(e.latlng, "Selected Location");
 });
 
 function updateRadiusCircle() {
