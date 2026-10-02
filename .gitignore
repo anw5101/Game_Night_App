@@ -20,6 +20,5 @@ vscode/
 # Python environment files
 backend/.venv/
 backend/__pycache__/
-web/public/data/events.json
 venv/
 __pycache__/
