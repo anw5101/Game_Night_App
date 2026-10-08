@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-10-07T15:19:32.368408+00:00",
+    "last_updated": "2026-10-08T15:23:44.387997+00:00",
     "events": [
         {
             "id": "gwd-quizBlock-2648773390",
@@ -470,19 +470,6 @@
             "url": "https://www.geekswhodrink.com/venues/3283320580"
         },
         {
-            "id": "gwd-quizBlock-3283321370",
-            "name": "Halloween Quiz Vol. 1 at Adventure Time",
-            "type": "Trivia",
-            "venue": "Adventure Time",
-            "location": {
-                "lat": 39.7186013,
-                "lng": -104.9877777
-            },
-            "day": "W",
-            "time": "7:30 pm",
-            "url": "https://www.geekswhodrink.com/venues/3283321370"
-        },
-        {
             "id": "gwd-quizBlock-3283320580",
             "name": "Holiday Music Bingo Night at Adventure Time",
             "type": "Trivia",
@@ -806,19 +793,6 @@
             "day": "Wednesday",
             "time": "7:00 pm",
             "url": "https://www.geekswhodrink.com/venues/1152019366"
-        },
-        {
-            "id": "gwd-quizBlock-3311739736",
-            "name": "Buffalo Wild Wings - Sheridan",
-            "type": "Trivia",
-            "venue": "Buffalo Wild Wings - Sheridan",
-            "location": {
-                "lat": 39.6466892,
-                "lng": -105.005491
-            },
-            "day": "Wednesday",
-            "time": "6:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/3311739736"
         },
         {
             "id": "gwd-quizBlock-3238466746",
@@ -2498,19 +2472,6 @@
             "url": "https://www.geekswhodrink.com/venues/3254703819"
         },
         {
-            "id": "gwd-quizBlock-3279190093",
-            "name": "The Casual Pint of Countryside Village",
-            "type": "Trivia",
-            "venue": "The Casual Pint of Countryside Village",
-            "location": {
-                "lat": 41.2496826,
-                "lng": -96.0477066
-            },
-            "day": "Monday",
-            "time": "6:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/3279190093"
-        },
-        {
             "id": "gwd-quizBlock-2296822328",
             "name": "Backlot Taphouse",
             "type": "Trivia",
@@ -2680,19 +2641,6 @@
             "url": "https://www.geekswhodrink.com/venues/3261146637"
         },
         {
-            "id": "gwd-quizBlock-3277361987",
-            "name": "Serve",
-            "type": "Trivia",
-            "venue": "Serve",
-            "location": {
-                "lat": 31.883341,
-                "lng": -106.573559
-            },
-            "day": "Monday",
-            "time": "7:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/3277361987"
-        },
-        {
             "id": "gwd-quizBlock-3279861749",
             "name": "T-Shotz Golf & Entertainment Venue",
             "type": "Trivia",
@@ -2728,6 +2676,19 @@
                 "lng": -94.6031476
             },
             "day": "Wednesday",
+            "time": "7:00 pm",
+            "url": "https://www.geekswhodrink.com/venues/77680327"
+        },
+        {
+            "id": "gwd-quizBlock-77680327",
+            "name": "Hi-Dive Lounge",
+            "type": "Trivia",
+            "venue": "Hi-Dive Lounge",
+            "location": {
+                "lat": 39.0570118,
+                "lng": -94.6031476
+            },
+            "day": "W",
             "time": "7:00 pm",
             "url": "https://www.geekswhodrink.com/venues/77680327"
         },
@@ -3330,19 +3291,6 @@
             "url": "https://www.geekswhodrink.com/venues/3169502198"
         },
         {
-            "id": "gwd-quizBlock-3311779514",
-            "name": "Buffalo Wild Wings - Chandler",
-            "type": "Trivia",
-            "venue": "Buffalo Wild Wings - Chandler",
-            "location": {
-                "lat": 33.2996192,
-                "lng": -111.8988548
-            },
-            "day": "Tuesday",
-            "time": "7:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/3311779514"
-        },
-        {
             "id": "gwd-quizBlock-3279088894",
             "name": "The Casual Pint - Ocotillo",
             "type": "Trivia",
@@ -3497,6 +3445,19 @@
             "day": "Tuesday",
             "time": "7:00 pm",
             "url": "https://www.geekswhodrink.com/venues/159489585"
+        },
+        {
+            "id": "gwd-quizBlock-3378001991",
+            "name": "Blind Pig (Starts on November 11!)",
+            "type": "Trivia",
+            "venue": "Blind Pig (Starts on November 11!)",
+            "location": {
+                "lat": 32.8103971,
+                "lng": -98.1130589
+            },
+            "day": "Wednesday",
+            "time": "7:00 pm",
+            "url": "https://www.geekswhodrink.com/venues/3378001991"
         },
         {
             "id": "gwd-quizBlock-37048590",
@@ -4253,19 +4214,6 @@
             "url": "https://www.geekswhodrink.com/venues/3053079877"
         },
         {
-            "id": "gwd-quizBlock-3373962136",
-            "name": "The Brass Tap - North Dallas (Starts on October 7!)",
-            "type": "Trivia",
-            "venue": "The Brass Tap - North Dallas (Starts on October 7!)",
-            "location": {
-                "lat": 32.962829,
-                "lng": -96.7891419
-            },
-            "day": "Wednesday",
-            "time": "7:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/3373962136"
-        },
-        {
             "id": "gwd-quizBlock-3373962167",
             "name": "The Brass Tap - North Dallas",
             "type": "Trivia",
@@ -4277,6 +4225,19 @@
             "day": "Tuesday",
             "time": "7:00 pm",
             "url": "https://www.geekswhodrink.com/venues/3373962167"
+        },
+        {
+            "id": "gwd-quizBlock-3373962136",
+            "name": "The Brass Tap - North Dallas",
+            "type": "Trivia",
+            "venue": "The Brass Tap - North Dallas",
+            "location": {
+                "lat": 32.962829,
+                "lng": -96.7891419
+            },
+            "day": "Wednesday",
+            "time": "7:00 pm",
+            "url": "https://www.geekswhodrink.com/venues/3373962136"
         },
         {
             "id": "gwd-quizBlock-2655349033",
@@ -4420,19 +4381,6 @@
             "day": "Saturday",
             "time": "2:00 pm",
             "url": "https://www.geekswhodrink.com/venues/2273075325"
-        },
-        {
-            "id": "gwd-quizBlock-3311714155",
-            "name": "Buffalo Wild Wings - Dallas",
-            "type": "Trivia",
-            "venue": "Buffalo Wild Wings - Dallas",
-            "location": {
-                "lat": 32.8155853,
-                "lng": -96.8093538
-            },
-            "day": "Tuesday",
-            "time": "7:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/3311714155"
         },
         {
             "id": "gwd-quizBlock-2330319418",
@@ -4742,8 +4690,8 @@
                 "lat": 44.7358762,
                 "lng": -93.216057
             },
-            "day": "Tuesday",
-            "time": "7:00 pm",
+            "day": "Wednesday",
+            "time": "6:30 pm",
             "url": "https://www.geekswhodrink.com/venues/3311767018"
         },
         {
@@ -5411,9 +5359,9 @@
         },
         {
             "id": "gwd-quizBlock-3375867487",
-            "name": "Progress Coffee + Beer - Buda (Starts on October 7!)",
+            "name": "Progress Coffee + Beer - Buda",
             "type": "Trivia",
-            "venue": "Progress Coffee + Beer - Buda (Starts on October 7!)",
+            "venue": "Progress Coffee + Beer - Buda",
             "location": {
                 "lat": 30.2920434,
                 "lng": -97.7118003
@@ -5710,9 +5658,9 @@
         },
         {
             "id": "gwd-quizBlock-3356828473",
-            "name": "Brewcaipa Brewing Company (Starts on October 7!)",
+            "name": "Brewcaipa Brewing Company",
             "type": "Trivia",
-            "venue": "Brewcaipa Brewing Company (Starts on October 7!)",
+            "venue": "Brewcaipa Brewing Company",
             "location": {
                 "lat": 34.0341943,
                 "lng": -117.0397971
@@ -6918,19 +6866,6 @@
             "url": "https://www.geekswhodrink.com/venues/3341847099"
         },
         {
-            "id": "gwd-quizBlock-3311747080",
-            "name": "Buffalo Wild Wings - Cypress",
-            "type": "Trivia",
-            "venue": "Buffalo Wild Wings - Cypress",
-            "location": {
-                "lat": 29.9699709,
-                "lng": -95.6904213
-            },
-            "day": "Wednesday",
-            "time": "7:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/3311747080"
-        },
-        {
             "id": "gwd-quizBlock-3365739026",
             "name": "Trailhead Tavern - Nevada City (Starts on November 15!)",
             "type": "Trivia",
@@ -7410,19 +7345,6 @@
             "day": "Wednesday",
             "time": "7:00 pm",
             "url": "https://www.geekswhodrink.com/venues/2323845698"
-        },
-        {
-            "id": "gwd-quizBlock-3311749793",
-            "name": "Buffalo Wild Wings - Baytown",
-            "type": "Trivia",
-            "venue": "Buffalo Wild Wings - Baytown",
-            "location": {
-                "lat": 29.7983518,
-                "lng": -94.9803169
-            },
-            "day": "Tuesday",
-            "time": "7:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/3311749793"
         },
         {
             "id": "gwd-quizBlock-3333528322",
@@ -8465,6 +8387,32 @@
             "url": "https://www.geekswhodrink.com/venues/2541268597"
         },
         {
+            "id": "gwd-quizBlock-3339670308",
+            "name": "ZO\u00cb (Starts on January 15!)",
+            "type": "Trivia",
+            "venue": "ZO\u00cb (Starts on January 15!)",
+            "location": {
+                "lat": 37.7870655,
+                "lng": -122.3974916
+            },
+            "day": "Friday",
+            "time": "7:00 PM",
+            "url": "https://www.geekswhodrink.com/venues/3339670308"
+        },
+        {
+            "id": "gwd-quizBlock-3339670493",
+            "name": "ZO\u00cb (Starts on January 11!)",
+            "type": "Trivia",
+            "venue": "ZO\u00cb (Starts on January 11!)",
+            "location": {
+                "lat": 37.7870655,
+                "lng": -122.3974916
+            },
+            "day": "Wednesday",
+            "time": "7:30 pm",
+            "url": "https://www.geekswhodrink.com/venues/3339670493"
+        },
+        {
             "id": "gwd-quizBlock-1989122577",
             "name": "Bear vs Bull @Alamo Drafthouse New Mission",
             "type": "Trivia",
@@ -9298,9 +9246,9 @@
         },
         {
             "id": "gwd-quizBlock-3353208980",
-            "name": "Paseo (Starts on October 7!)",
+            "name": "Paseo",
             "type": "Trivia",
-            "venue": "Paseo (Starts on October 7!)",
+            "venue": "Paseo",
             "location": {
                 "lat": 47.5864278,
                 "lng": -122.3338209
@@ -9515,19 +9463,6 @@
             },
             "day": "Thursday",
             "time": "5:00 pm",
-            "url": "https://www.geekswhodrink.com/venues/2876882121"
-        },
-        {
-            "id": "gwd-quizBlock-2876882121",
-            "name": "Halloween Quiz Vol. 1 at SLU BRU",
-            "type": "Trivia",
-            "venue": "SLU BRU",
-            "location": {
-                "lat": 47.625752,
-                "lng": -122.3416696
-            },
-            "day": "W",
-            "time": "6:00 pm",
             "url": "https://www.geekswhodrink.com/venues/2876882121"
         },
         {
@@ -10766,6 +10701,19 @@
             "url": "https://www.geekswhodrink.com/venues/3319380017"
         },
         {
+            "id": "gwd-quizBlock-3378193741",
+            "name": "Carmella's - Whitehall Commons (Starts on November 12!)",
+            "type": "Trivia",
+            "venue": "Carmella's - Whitehall Commons (Starts on November 12!)",
+            "location": {
+                "lat": 35.1459132,
+                "lng": -80.9298461
+            },
+            "day": "Thursday",
+            "time": "6:30 pm",
+            "url": "https://www.geekswhodrink.com/venues/3378193741"
+        },
+        {
             "id": "gwd-quizBlock-3319380583",
             "name": "Empire Pizza Rock Hill",
             "type": "Trivia",
@@ -10985,6 +10933,19 @@
             "day": "Tuesday",
             "time": "7:00 pm",
             "url": "https://www.geekswhodrink.com/venues/3375361655"
+        },
+        {
+            "id": "gwd-quizBlock-3378223810",
+            "name": "Rusty Nickel Brewing Co. (Starts on November 16!)",
+            "type": "Trivia",
+            "venue": "Rusty Nickel Brewing Co. (Starts on November 16!)",
+            "location": {
+                "lat": 42.8334047,
+                "lng": -78.7426679
+            },
+            "day": "Monday",
+            "time": "7:00 pm",
+            "url": "https://www.geekswhodrink.com/venues/3378223810"
         },
         {
             "id": "gwd-quizBlock-3206195315",
@@ -11284,6 +11245,19 @@
             "day": "Thursday",
             "time": "6:00 pm",
             "url": "https://www.geekswhodrink.com/venues/2845242708"
+        },
+        {
+            "id": "gwd-quizBlock-3378224267",
+            "name": "Barrio Tacos - Raleigh (Starts on November 10!)",
+            "type": "Trivia",
+            "venue": "Barrio Tacos - Raleigh (Starts on November 10!)",
+            "location": {
+                "lat": 35.7865801,
+                "lng": -78.644927
+            },
+            "day": "Tuesday",
+            "time": "7:00 pm",
+            "url": "https://www.geekswhodrink.com/venues/3378224267"
         },
         {
             "id": "gwd-quizBlock-3377433504",
@@ -11781,9 +11755,9 @@
         },
         {
             "id": "gwd-quizBlock-3361018366",
-            "name": "McNamara's Pub and Restaurant (Starts on October 7!)",
+            "name": "McNamara's Pub and Restaurant",
             "type": "Trivia",
-            "venue": "McNamara's Pub and Restaurant (Starts on October 7!)",
+            "venue": "McNamara's Pub and Restaurant",
             "location": {
                 "lat": 38.8535529,
                 "lng": -77.0551027
@@ -12261,6 +12235,19 @@
             "url": "https://www.geekswhodrink.com/venues/2982912323"
         },
         {
+            "id": "gwd-quizBlock-3378217793",
+            "name": "Gather Food Hall (Starts on November 19!)",
+            "type": "Trivia",
+            "venue": "Gather Food Hall (Starts on November 19!)",
+            "location": {
+                "lat": 39.9554712,
+                "lng": -75.1840564
+            },
+            "day": "Thursday",
+            "time": "7:00 PM",
+            "url": "https://www.geekswhodrink.com/venues/3378217793"
+        },
+        {
             "id": "gwd-quizBlock-3312108038",
             "name": "Drinkers Pub",
             "type": "Trivia",
@@ -12431,9 +12418,9 @@
         },
         {
             "id": "gwd-quizBlock-3361239800",
-            "name": "Porta (Starts on October 7!)",
+            "name": "Porta",
             "type": "Trivia",
-            "venue": "Porta (Starts on October 7!)",
+            "venue": "Porta",
             "location": {
                 "lat": 40.720216,
                 "lng": -74.0436958
@@ -13314,19 +13301,6 @@
             "url": "https://www.geekswhodrink.com/venues/2671710377"
         },
         {
-            "id": "gwd-quizBlock-2671710377",
-            "name": "Hocus Pocus Quiz Vol. 1 at Park-9 Dog Bar",
-            "type": "Trivia",
-            "venue": "Park-9 Dog Bar",
-            "location": {
-                "lat": 42.4081357,
-                "lng": -71.0643209
-            },
-            "day": "W",
-            "time": "7:30 pm",
-            "url": "https://www.geekswhodrink.com/venues/2671710377"
-        },
-        {
             "id": "gwd-quizBlock-2965727169",
             "name": "Long Live Roxbury",
             "type": "Trivia",
@@ -13445,9 +13419,9 @@
         },
         {
             "id": "gwd-quizBlock-3300336091",
-            "name": "Bissell Brothers (Resumes October 1!)",
+            "name": "Bissell Brothers",
             "type": "Trivia",
-            "venue": "Bissell Brothers (Resumes October 1!)",
+            "venue": "Bissell Brothers",
             "location": {
                 "lat": 43.6514729,
                 "lng": -70.2904604
@@ -13510,107 +13484,94 @@
         },
         {
             "id": "singo-0",
-            "name": "Singo at 22nd Street Bar & Patio - Metairie",
-            "type": "Music Bingo",
-            "venue": "22nd Street Bar & Patio - Metairie",
+            "name": "Live Trivia at 1925 PubHouse - Muncie, IN",
+            "type": "Trivia",
+            "venue": "1925 PubHouse - Muncie, IN",
             "location": {
-                "lat": 30.0052902,
-                "lng": -90.1529509
+                "lat": 40.1892185,
+                "lng": -85.3877825
             },
-            "day": "Wednesdays",
-            "time": "6:30 PM",
-            "url": "https://challengeentertainment.com/show/22nd-street-bar-patio-metairie-singo/"
+            "day": "Thursdays",
+            "time": "7:00 PM",
+            "url": "https://challengeentertainment.com/show/1925-pubhouse-muncie-in-live-trivia/"
         },
         {
             "id": "singo-1",
-            "name": "Live Trivia at 26 Degree Brewing Co. - Pompano Beach",
+            "name": "Live Trivia at 23rd Street Brewery - Lawrence",
             "type": "Trivia",
-            "venue": "26 Degree Brewing Co. - Pompano Beach",
+            "venue": "23rd Street Brewery - Lawrence",
             "location": {
-                "lat": 26.2313012,
-                "lng": -80.0977863
+                "lat": 38.9430192,
+                "lng": -95.2811056
             },
-            "day": "Wednesdays",
-            "time": "7:00 PM",
-            "url": "https://challengeentertainment.com/show/26-degree-brewing-co-pompano-beach-live-trivia/"
+            "day": "Thursdays",
+            "time": "8:30 PM",
+            "url": "https://challengeentertainment.com/show/23rd-street-brewery-lawrence-live-trivia/"
         },
         {
             "id": "singo-2",
-            "name": "Live Trivia at 4th Street Bar - Columbus",
-            "type": "Trivia",
-            "venue": "4th Street Bar - Columbus",
+            "name": "Singo at 3rd Planet Brewing Co. - Niceville",
+            "type": "Music Bingo",
+            "venue": "3rd Planet Brewing Co. - Niceville",
             "location": {
-                "lat": 39.2023916,
-                "lng": -85.9205651
+                "lat": 30.514507,
+                "lng": -86.458898
             },
-            "day": "Wednesdays",
-            "time": "7:00 PM",
-            "url": "https://challengeentertainment.com/show/4th-street-bar-columbus-live-trivia/"
+            "day": "Thursdays",
+            "time": "6:30 PM",
+            "url": "https://challengeentertainment.com/show/3rd-planet-brewing-co-niceville-singo/"
         },
         {
             "id": "singo-3",
-            "name": "Live Trivia at 731 Sports Bar - Jackson",
+            "name": "Live Trivia at 5216 Table & Tap - Metairie",
             "type": "Trivia",
-            "venue": "731 Sports Bar - Jackson",
+            "venue": "5216 Table & Tap - Metairie",
             "location": {
-                "lat": 35.6669703,
-                "lng": -88.8459333
+                "lat": 30.0052184,
+                "lng": -90.1979176
             },
-            "day": "Wednesdays",
-            "time": "6:30 PM",
-            "url": "https://challengeentertainment.com/show/731-sports-bar-jackson-live-trivia/"
+            "day": "Thursdays",
+            "time": "7:30 PM",
+            "url": "https://challengeentertainment.com/show/5216-table-tap-metairie-live-trivia/"
         },
         {
             "id": "singo-4",
-            "name": "Singo at AJ's at the Alley - Hutchinson",
-            "type": "Music Bingo",
-            "venue": "AJ's at the Alley - Hutchinson",
+            "name": "Live Trivia at American Legion Post 19 - Midland",
+            "type": "Trivia",
+            "venue": "American Legion Post 19 - Midland",
             "location": {
-                "lat": 38.078802,
-                "lng": -97.9060621
+                "lat": 32.0353319,
+                "lng": -102.0894328
             },
-            "day": "Wednesdays",
-            "time": "6:30 PM",
-            "url": "https://challengeentertainment.com/show/ajs-at-the-alley-hutchinson-singo/"
+            "day": "Thursdays",
+            "time": "7:00 PM",
+            "url": "https://challengeentertainment.com/show/american-legion-post-19-midland-live-trivia/"
         },
         {
             "id": "singo-5",
-            "name": "Live Trivia at Alabama Peanut Co. - Birmingham",
+            "name": "Live Trivia at American Pie Pizza - Maumelle",
             "type": "Trivia",
-            "venue": "Alabama Peanut Co. - Birmingham",
+            "venue": "American Pie Pizza - Maumelle",
             "location": {
-                "lat": 33.5140436,
-                "lng": -86.8049807
+                "lat": 34.8279951,
+                "lng": -92.3919222
             },
-            "day": "Wednesdays",
-            "time": "6:00 PM",
-            "url": "https://challengeentertainment.com/show/alabama-peanut-co-birmingham-live-trivia/"
+            "day": "Thursdays",
+            "time": "7:00 PM",
+            "url": "https://challengeentertainment.com/show/american-pie-pizza-maumelle-live-trivia/"
         },
         {
             "id": "singo-6",
-            "name": "Live Trivia at Alley's Alehouse @ Pinheads Entertainment Center - Fishers",
-            "type": "Trivia",
-            "venue": "Alley's Alehouse @ Pinheads Entertainment Center - Fishers",
+            "name": "Singo at BabyCat Brewery - Bethesda, MD",
+            "type": "Music Bingo",
+            "venue": "BabyCat Brewery - Bethesda, MD",
             "location": {
-                "lat": 39.987628,
-                "lng": -86.0063493
+                "lat": 38.9904554,
+                "lng": -77.0981013
             },
-            "day": "Wednesdays",
-            "time": "7:00 PM",
-            "url": "https://challengeentertainment.com/show/alleys-alehouse-pinheads-entertainment-center-fishers-live-trivia/"
-        },
-        {
-            "id": "singo-7",
-            "name": "Pub Poll at American Legion Post 81. - Cleveland",
-            "type": "Trivia",
-            "venue": "American Legion Post 81. - Cleveland",
-            "location": {
-                "lat": 35.2120247,
-                "lng": -84.8698012
-            },
-            "day": "Wednesdays",
-            "time": "6:00 PM",
-            "url": "https://challengeentertainment.com/show/american-legion-post-81-cleveland-pub-poll/"
+            "day": "Thursdays",
+            "time": "6:30 PM",
+            "url": "https://challengeentertainment.com/"
         }
     ]
 }
