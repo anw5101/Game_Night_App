@@ -7,7 +7,20 @@ from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
+from cities import US_CITIES
+
 def geocode_address(address):
+    cache_file = os.path.join(os.path.dirname(__file__), "geocode_cache.json")
+    cache = {}
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, "r") as f:
+                cache = json.load(f)
+        except: pass
+
+    if address in cache:
+        return cache[address]
+
     try:
         time.sleep(1) # Rate limit Nominatim
         url = "https://nominatim.openstreetmap.org/search"
@@ -16,7 +29,11 @@ def geocode_address(address):
         response = requests.get(url, headers=headers, params=params)
         data = response.json()
         if data:
-            return {"lat": float(data[0]["lat"]), "lng": float(data[0]["lon"])}
+            loc = {"lat": float(data[0]["lat"]), "lng": float(data[0]["lon"])}
+            cache[address] = loc
+            with open(cache_file, "w") as f:
+                json.dump(cache, f, indent=2)
+            return loc
     except Exception as e:
         print(f"Geocoding failed for {address}: {e}")
     return None
@@ -24,7 +41,11 @@ def geocode_address(address):
 def scrape_gwd(page):
     print("Scraping Geeks Who Drink...")
     events = []
-    page.goto("https://www.geekswhodrink.com/venues/", wait_until="networkidle")
+    try:
+        page.goto("https://www.geekswhodrink.com/venues/", wait_until="domcontentloaded", timeout=60000)
+    except Exception as e:
+        print(f"Error loading Geeks Who Drink venues: {e}")
+        return events
     page.wait_for_timeout(3000)
     soup = BeautifulSoup(page.content(), "html.parser")
     
@@ -59,12 +80,16 @@ def scrape_gwd(page):
 def scrape_singo(page):
     print("Scraping Singo...")
     events = []
-    page.goto("https://challengeentertainment.com/find-a-game/", wait_until="networkidle")
+    try:
+        page.goto("https://challengeentertainment.com/find-a-game/", wait_until="domcontentloaded", timeout=60000)
+    except Exception as e:
+        print(f"Error loading Singo venues: {e}")
+        return events
     page.wait_for_timeout(3000)
     soup = BeautifulSoup(page.content(), "html.parser")
     
     cards = soup.find_all("div", class_="ntl-card")
-    for card in cards[:10]: # Limiting for geocoding
+    for card in cards: # Removed [:10] limitation
         try:
             title_elem = card.find("div", class_="ntl-card-title")
             title = title_elem.text if title_elem else "Singo"
@@ -112,24 +137,29 @@ def fb_strategy_dummy_account(page):
         page.click("button[name='login']")
         page.wait_for_timeout(5000)
         
-        page.goto("https://www.facebook.com/events/search/?q=trivia")
-        page.wait_for_timeout(4000)
-        soup = BeautifulSoup(page.content(), "html.parser")
-        links = soup.find_all("a", href=True)
-        for a in links:
-            if "/events/" in a["href"] and "search" not in a["href"]:
-                event_id = a["href"].split("/events/")[1].split("/")[0]
-                if event_id.isdigit():
-                    events.append({
-                        "id": f"fb-auth-{event_id}",
-                        "name": f"Facebook Trivia ({event_id})",
-                        "type": "Trivia",
-                        "venue": "Check FB",
-                        "location": {"lat": 39.8283, "lng": -98.5795}, # Placeholder
-                        "day": "Varies",
-                        "time": "Varies",
-                        "url": f"https://www.facebook.com/events/{event_id}"
-                    })
+        for city in US_CITIES: # Loop all cities
+            try:
+                search_query = urllib.parse.quote(f"trivia {city}")
+                page.goto(f"https://www.facebook.com/events/search/?q={search_query}")
+                page.wait_for_timeout(4000)
+                soup = BeautifulSoup(page.content(), "html.parser")
+                links = soup.find_all("a", href=True)
+                for a in links:
+                    if "/events/" in a["href"] and "search" not in a["href"]:
+                        event_id = a["href"].split("/events/")[1].split("/")[0]
+                        if event_id.isdigit():
+                            events.append({
+                                "id": f"fb-auth-{event_id}",
+                                "name": f"Facebook Trivia ({event_id})",
+                                "type": "Trivia",
+                                "venue": "Check FB",
+                                "location": geocode_address(city) or {"lat": 39.8, "lng": -98.5},
+                                "day": "Varies",
+                                "time": "Varies",
+                                "url": f"https://www.facebook.com/events/{event_id}"
+                            })
+            except Exception as e:
+                print(f"Failed to scrape dummy account for {city}: {e}")
     except Exception as e:
         print(f"Dummy account scraping failed: {e}")
         
@@ -140,80 +170,44 @@ def fb_strategy_dummy_account(page):
 def fb_strategy_google_search(page):
     print("Executing FB Google Search strategy...")
     events = []
-    try:
-        page.goto("https://www.google.com/search?q=site:facebook.com/events+trivia+bar")
-        page.wait_for_timeout(3000)
-        soup = BeautifulSoup(page.content(), "html.parser")
-        for a in soup.find_all("a", href=True):
-            href = a["href"]
-            # Google links sometimes have /url?q=...
-            if "/url?q=" in href:
-                href = urllib.parse.unquote(href.split("/url?q=")[1].split("&")[0])
-            if "facebook.com/events/" in href:
-                event_id_parts = href.split("/events/")
-                if len(event_id_parts) > 1:
-                    event_id = event_id_parts[1].split("/")[0]
-                    if event_id.isdigit():
-                        events.append({
-                            "id": f"fb-google-{event_id}",
-                            "name": "FB Event from Google",
-                            "type": "Trivia",
-                            "venue": "Check Link",
-                            "location": {"lat": 39.9, "lng": -98.5}, # Placeholder
-                            "day": "Varies",
-                            "time": "Varies",
-                            "url": href
-                        })
-    except Exception as e:
-        print(f"Google search scraping failed: {e}")
+    
+    for city in US_CITIES: # Loop all cities
+        try:
+            search_query = urllib.parse.quote(f"site:facebook.com/events trivia bar {city}")
+            page.goto(f"https://www.google.com/search?q={search_query}")
+            page.wait_for_timeout(3000)
+            soup = BeautifulSoup(page.content(), "html.parser")
+            for a in soup.find_all("a", href=True):
+                href = a["href"]
+                # Google links sometimes have /url?q=...
+                if "/url?q=" in href:
+                    href = urllib.parse.unquote(href.split("/url?q=")[1].split("&")[0])
+                if "facebook.com/events/" in href:
+                    event_id_parts = href.split("/events/")
+                    if len(event_id_parts) > 1:
+                        event_id = event_id_parts[1].split("/")[0]
+                        if event_id.isdigit():
+                            events.append({
+                                "id": f"fb-google-{event_id}",
+                                "name": "FB Event from Google",
+                                "type": "Trivia",
+                                "venue": "Check Link",
+                                "location": geocode_address(city) or {"lat": 39.9, "lng": -98.5},
+                                "day": "Varies",
+                                "time": "Varies",
+                                "url": href
+                            })
+        except Exception as e:
+            print(f"Google search scraping failed for {city}: {e}")
         
     print(f"Found {len(events)} events via Google Search.")
     return events
 
-# --- Facebook Strategy 3: Third Party API (SerpApi) ---
-def fb_strategy_serpapi():
-    events = []
-    api_key = os.environ.get("SERPAPI_KEY")
-    if not api_key:
-        print("Skipping SerpApi strategy (SERPAPI_KEY not provided in ENV).")
-        return events
-        
-    print("Executing FB SerpApi strategy...")
-    try:
-        params = {
-            "engine": "google_events",
-            "q": "trivia night",
-            "api_key": api_key
-        }
-        res = requests.get("https://serpapi.com/search", params=params)
-        data = res.json()
-        for event in data.get("events_results", []):
-            if "facebook.com/events" in event.get("link", ""):
-                address = ", ".join(event.get("address", []))
-                loc = geocode_address(address) if address else {"lat": 39.8, "lng": -98.5}
-                events.append({
-                    "id": f"fb-serp-{len(events)}",
-                    "name": event.get("title", "FB Event via API"),
-                    "type": "Trivia",
-                    "venue": event.get("venue", {}).get("name", "Unknown"),
-                    "location": loc or {"lat": 39.8, "lng": -98.5},
-                    "day": event.get("date", {}).get("when", "Unknown"),
-                    "time": "Unknown",
-                    "url": event.get("link")
-                })
-    except Exception as e:
-        print(f"SerpApi failed: {e}")
-        
-    print(f"Found {len(events)} events via SerpApi.")
-    return events
-
 def scrape_facebook_strategies(page):
     events = []
-    # 1. API Strategy (Most Reliable)
-    events.extend(fb_strategy_serpapi())
-    # 2. Dummy Account Strategy (Playwright Authenticated)
+    # 1. Dummy Account Strategy (Playwright Authenticated)
     events.extend(fb_strategy_dummy_account(page))
-    # 3. Google Search Strategy (Playwright Unauthenticated Fallback)
+    # 2. Google Search Strategy (Playwright Unauthenticated Fallback)
     events.extend(fb_strategy_google_search(page))
     
     # Deduplicate by URL
